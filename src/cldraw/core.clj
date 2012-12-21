@@ -30,9 +30,7 @@
 
 
 (defn count-combos [left-a left-b]
-;	(if (empty? left-a) (dosync (ref-set teller (inc @teller)) (println @teller) 1)
 	(if (empty? left-a) 1
-		;(reduce + (for [a left-a] (+ 1 (reduce + (for [b left-b] (count-combos (disj left-a a) (disj left-b b) (conj picks (str (a :name) "-" (b :name)))))))))
 		(reduce + (for [b left-b] (count-combos (rest left-a) (disj left-b b)  )))
 	)
 )
