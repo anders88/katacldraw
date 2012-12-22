@@ -31,7 +31,7 @@
 
 (defn count-combos [left-a left-b]
 	(if (empty? left-a) 1
-		(reduce + (for [b left-b] (count-combos (rest left-a) (disj left-b b)  )))
+		(let [a (first left-a)] (reduce + (for [b left-b] (if (legal? a b) (count-combos (rest left-a) (disj left-b b)) 0))))
 	)
 )
 
