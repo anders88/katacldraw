@@ -1,12 +1,6 @@
-# cldraw
+A kata counting number of possible draws in the Champions leauge knockout stage.
 
-A Clojure library designed to ... well, that part is up to you.
-
-## Usage
-
-FIXME
-
-## License
+It contains a bug. Need to find it..
 
 Copyright © 2012 FIXME
 
